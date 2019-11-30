@@ -2,7 +2,7 @@ FROM node:latest
 
 WORKDIR ./app
 
-COPY ./app1.js ./index.js
+COPY ./app2.js ./index.js
 COPY ./package.json ./package.json
 COPY ./package-lock.json ./package-lock.json
 

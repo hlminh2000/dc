@@ -1,0 +1,23 @@
+version: '3'
+services:
+  app1:
+    build:
+      context: ./
+      dockerfile: ./app1.Dockerfile
+    ports:
+    - 81:3001
+    depends_on:
+    - app2
+    environment:
+      PORT: 3001
+      APP2_URL: http://app2:3002
+
+  app2:
+    build:
+      context: ./
+      dockerfile: ./app2.Dockerfile
+    ports:
+    - 82:3002
+    environment:
+      PORT: 3002
+
