@@ -3,7 +3,7 @@ services:
   app1:
     build:
       context: ./
-      dockerfile: ./app1.Dockerfile
+      dockerfile: ./Dockerfiles/app1.Dockerfile
     ports:
     - 81:3001
     depends_on:
@@ -15,7 +15,7 @@ services:
   app2:
     build:
       context: ./
-      dockerfile: ./app2.Dockerfile
+      dockerfile: ./Dockerfiles/app2.Dockerfile
     ports:
     - 82:3002
     environment:

@@ -1,15 +1,14 @@
 FROM node:latest
 
-WORKDIR ./app
+WORKDIR /app
 
-COPY ./app1.js ./index.js
+COPY ./app2.js ./index.js
 COPY ./package.json ./package.json
 COPY ./package-lock.json ./package-lock.json
 
 RUN npm ci
 
-ENV PORT=3001
-ENV APP2_URL=http://localhost:81
-EXPOSE 3001
+ENV PORT=3002
+EXPOSE 3002
 
 CMD ["node", "index.js"]

@@ -13,7 +13,7 @@ app.use("*", (req, res, next) => {
 app.get("/app2", (req, res) => {
 	fetch(APP2_URL)
 		.then(r => r.text())
-		.then(text => res.send(text))
+		.then(text => res.send(`through app 1: ${text}`))
 		.catch(err => res.status(500).send("couldn't reach out to app2"))
 })
 
